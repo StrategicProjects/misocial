@@ -34,6 +34,7 @@ dependencies = [
 Homepage = "https://github.com/StrategicProjects/misocial"
 Repository = "https://github.com/StrategicProjects/misocial"
 Issues = "https://github.com/StrategicProjects/misocial/issues"
+Changelog = "https://github.com/StrategicProjects/misocial/blob/main/misocialpy/NEWS.md"
 
 [project.optional-dependencies]
 test = ["pytest>=7", "responses>=0.23"]
