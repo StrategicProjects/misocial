@@ -37,6 +37,9 @@ Imports:
     rlang,
     utils
 Suggests:
+    ggplot2,
+    tidyr,
+    scales,
     testthat (>= 3.2.1),
     httptest2,
     withr,

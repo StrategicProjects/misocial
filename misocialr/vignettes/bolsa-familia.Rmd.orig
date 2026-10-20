@@ -1,0 +1,177 @@
+---
+title: "Real-world example: Bolsa Família in Pernambuco"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Real-world example: Bolsa Família in Pernambuco}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!--
+bolsa-familia.Rmd is generated from bolsa-familia.Rmd.orig by
+vignettes/precompile.R, which runs the code against the live MI Social API.
+Edit the .orig file, then re-run the script and commit the regenerated .Rmd
+and the bolsa-familia-*.png figures.
+-->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = TRUE,
+  error = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.path = "bolsa-familia-",
+  fig.width = 7,
+  fig.height = 4.2,
+  dpi = 96
+)
+options(cli.num_colors = 1, width = 80)
+```
+
+## Introduction
+
+This vignette walks through a realistic analysis with misocialr: the Bolsa
+Família programme in the state of Pernambuco — how many families receive the
+benefit, how much is transferred, and how that is distributed across
+municipalities.
+
+```{r}
+library(misocialr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+## Step 1 — Find the fields
+
+The `bolsa_familia` theme of the dictionary says what is available and what
+can be summed:
+
+```{r}
+mds_fields("bolsa_familia")[, c("field", "label", "nature")]
+```
+
+We will use the count of beneficiary families (`estoque`: it can be summed
+across municipalities, not across months) and the value transferred to them
+(`fluxo`: it can be summed across both).
+
+## Step 2 — Retrieve three years of data
+
+One call brings every municipality of Pernambuco (`"PE"`) for the last 36
+months:
+
+```{r}
+pbf <- mds_bolsa_familia(
+  periods = -36,
+  localities = "PE",
+  fields = c("qtd_familias_beneficiarias_bolsa_familia_i",
+             "valor_repassado_bolsa_familia_f")
+)
+pbf
+```
+
+The API answers 0 for months not published yet, so the first thing to do is
+remove that trailing tail. `reference = "brazil"` decides from the whole
+country, which keeps legitimate zeros:
+
+```{r}
+pbf <- mds_drop_unpublished(pbf, reference = "brazil")
+range(pbf$period)
+```
+
+## Step 3 — The state series
+
+Both fields have a nature that sums across municipalities, so the state
+total is a plain sum by month:
+
+```{r}
+state <- pbf |>
+  summarise(value = sum(value), .by = c(period, field)) |>
+  mutate(month = as.Date(paste0(period, "01"), "%Y%m%d"))
+
+families <- filter(state,
+                   field == "qtd_familias_beneficiarias_bolsa_familia_i")
+```
+
+```{r}
+ggplot(families, aes(month, value / 1e6)) +
+  geom_line(color = "#0b4d3c", linewidth = 0.8) +
+  geom_point(data = slice_tail(families, n = 1),
+             color = "#0b4d3c", size = 2) +
+  scale_y_continuous(labels = scales::label_number(accuracy = 0.01)) +
+  labs(
+    title = "Families receiving Bolsa Família in Pernambuco",
+    subtitle = "Millions of beneficiary families per month",
+    x = NULL, y = NULL,
+    caption = "Source: MDS/SAGI, MI Social."
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.minor = element_blank())
+```
+
+## Step 4 — Value per family, municipality by municipality
+
+For the latest published month, put the two fields side by side and compute
+the average transfer per family:
+
+```{r}
+latest <- max(pbf$period)
+per_family <- pbf |>
+  filter(period == latest) |>
+  pivot_wider(id_cols = c(ibge_code, locality_name),
+              names_from = field, values_from = value) |>
+  mutate(value_per_family =
+           valor_repassado_bolsa_familia_f /
+           qtd_familias_beneficiarias_bolsa_familia_i)
+
+summary(per_family$value_per_family)
+```
+
+The ten municipalities with the most beneficiary families:
+
+```{r, fig.height = 4.6}
+top10 <- per_family |>
+  slice_max(qtd_familias_beneficiarias_bolsa_familia_i, n = 10) |>
+  mutate(locality_name = reorder(locality_name,
+                                 qtd_familias_beneficiarias_bolsa_familia_i))
+
+ggplot(top10,
+       aes(qtd_familias_beneficiarias_bolsa_familia_i / 1e3,
+           locality_name)) +
+  geom_col(fill = "#209b74", width = 0.72) +
+  geom_text(aes(label = scales::label_number(accuracy = 1,
+                                             big.mark = ",")(
+                  qtd_familias_beneficiarias_bolsa_familia_i / 1e3)),
+            hjust = -0.15, size = 3.2, color = "grey30") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(
+    title = "Largest Bolsa Família municipalities in Pernambuco",
+    subtitle = paste0("Thousands of beneficiary families, ",
+                      format(as.Date(paste0(latest, "01"), "%Y%m%d"),
+                             "%Y-%m")),
+    x = NULL, y = NULL,
+    caption = "Source: MDS/SAGI, MI Social."
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+## Step 5 — Keep the provenance
+
+Every retrieval records when it was made, which is worth keeping next to any
+published figure:
+
+```{r}
+attr(pbf, "retrieved_at")
+```
+
+## Where to go next
+
+- `vignette("getting-started")` for the basic workflow.
+- `vignette("api-concepts")` for what a document, a facet and an
+  unpublished month are.
+- `mds_fields()` for the other six themes: Cadastro Único, BPC, the SUAS
+  network and its funding, conditionalities and food security.
