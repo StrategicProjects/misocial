@@ -1,0 +1,11 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":0,
+    "params":{
+      "q":"*:*",
+      "fq":"campo_inexistente_i:[* TO *]",
+      "rows":"0",
+      "wt":"json"}},
+  "response":{"numFound":0,"start":0,"docs":[]
+  }}

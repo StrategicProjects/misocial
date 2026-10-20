@@ -1,0 +1,32 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":0,
+    "params":{
+      "q":"*:*",
+      "fl":"id,codigo_ibge,municipio,sigla_uf,anomes_s,bpc_ben_i,bpc_idoso_ben_i,bpc_pcd_ben_i,bpc_val_f,bpc_idoso_val_f,bpc_pcd_val_f,bpc_idoso_val_medio_f,bpc_pcd_val_medio_f,cadsuas_qtd_cras_i,cadsuas_qtd_creas_i",
+      "cursorMark":"*",
+      "fq":["anomes_s:(202509)",
+        "codigo_ibge:(261160)"],
+      "sort":"id asc",
+      "rows":"10000",
+      "wt":"json"}},
+  "response":{"numFound":1,"start":0,"docs":[
+      {
+        "bpc_idoso_val_f":7.4860256E7,
+        "bpc_ben_i":102941,
+        "municipio":"RECIFE",
+        "bpc_idoso_ben_i":49284,
+        "bpc_idoso_val_medio_f":1518.9565,
+        "codigo_ibge":"261160",
+        "bpc_pcd_ben_i":53657,
+        "sigla_uf":"PE",
+        "anomes_s":"202509",
+        "cadsuas_qtd_cras_i":16,
+        "cadsuas_qtd_creas_i":7,
+        "bpc_val_f":1.56372816E8,
+        "id":"mes_mu26116020250901",
+        "bpc_pcd_val_f":8.1512568E7,
+        "bpc_pcd_val_medio_f":1519.1414}]
+  },
+  "nextCursorMark":"AoE0bWVzX211MjYxMTYwMjAyNTA5MDE="}

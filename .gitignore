@@ -1,0 +1,15 @@
+.DS_Store
+.Rproj.user
+.Rhistory
+*.Rcheck/
+misocialr_*.tar.gz
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+.venv/
+tests/testthat/api.bak/
+tests/testthat/_problems/

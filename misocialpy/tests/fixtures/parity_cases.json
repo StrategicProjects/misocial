@@ -1,0 +1,654 @@
+{
+  "_sobre": "Casos de comportamento executados pelas duas suítes (test-paridade.R e test_paridade_casos.py). Cada caso tem a entrada e a saída esperada ou a classe de erro (validation, response, conflict). null = NA/None. Copiado para o Python por sincronizar_python.py.",
+  "parse_periods": [
+    {
+      "input": [
+        2024
+      ],
+      "output": [
+        "202401",
+        "202402",
+        "202403",
+        "202404",
+        "202405",
+        "202406",
+        "202407",
+        "202408",
+        "202409",
+        "202410",
+        "202411",
+        "202412"
+      ]
+    },
+    {
+      "input": [
+        202402,
+        202401
+      ],
+      "output": [
+        "202401",
+        "202402"
+      ]
+    },
+    {
+      "input": [
+        "202402",
+        "202401",
+        "202401"
+      ],
+      "output": [
+        "202401",
+        "202402"
+      ]
+    },
+    {
+      "input": [
+        -3
+      ],
+      "length": 3
+    },
+    {
+      "input": [
+        202413
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        0
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        -1.9
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        202401.5
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        null
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        202401,
+        null
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [],
+      "error": "validation"
+    },
+    {
+      "input": [
+        -3,
+        202401
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        "2024-01"
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        1999
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        9999
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        999912
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        2003.0
+      ],
+      "length": 12
+    },
+    {
+      "input": [
+        "200301"
+      ],
+      "output": [
+        "200301"
+      ]
+    }
+  ],
+  "parse_localities": [
+    {
+      "input": [
+        "BR"
+      ],
+      "states": [],
+      "municipalities": []
+    },
+    {
+      "input": [
+        "br"
+      ],
+      "states": [],
+      "municipalities": []
+    },
+    {
+      "input": [
+        "PE",
+        "25",
+        "2611606",
+        "260790",
+        "2611606"
+      ],
+      "states": [
+        "PE",
+        "PB"
+      ],
+      "municipalities": [
+        "261160",
+        "260790"
+      ]
+    },
+    {
+      "input": [
+        "BR",
+        "PE",
+        "2611606"
+      ],
+      "states": [],
+      "municipalities": []
+    },
+    {
+      "input": [
+        "2611533"
+      ],
+      "states": [],
+      "municipalities": [
+        "261153"
+      ]
+    },
+    {
+      "input": [
+        "2611600"
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        "BR",
+        "Recifex"
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        "BR",
+        "99"
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [],
+      "error": "validation"
+    },
+    {
+      "input": [
+        null
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        "PE",
+        ""
+      ],
+      "error": "validation"
+    },
+    {
+      "input": [
+        26
+      ],
+      "states": [
+        "PE"
+      ],
+      "municipalities": []
+    },
+    {
+      "input": [
+        26.0
+      ],
+      "states": [
+        "PE"
+      ],
+      "municipalities": []
+    },
+    {
+      "input": [
+        2611606
+      ],
+      "states": [],
+      "municipalities": [
+        "261160"
+      ]
+    },
+    {
+      "input": [
+        100000
+      ],
+      "states": [],
+      "municipalities": [
+        "100000"
+      ],
+      "nota": "6 dígitos sem dígito verificador: aceito no formato; mds_data() avisa se não existir"
+    }
+  ],
+  "ibge_code7": [
+    {
+      "input": [
+        "261160",
+        "261153",
+        "530010",
+        "12345",
+        null
+      ],
+      "output": [
+        "2611606",
+        "2611533",
+        "5300108",
+        null,
+        null
+      ]
+    },
+    {
+      "input": [
+        261160,
+        261153
+      ],
+      "output": [
+        "2611606",
+        "2611533"
+      ]
+    }
+  ],
+  "doc_value": [
+    {
+      "value": 10,
+      "output": 10
+    },
+    {
+      "value": "98463694.0",
+      "output": 98463694
+    },
+    {
+      "value": "NORDESTE",
+      "error": "validation"
+    },
+    {
+      "value": "NaN",
+      "error": "response"
+    },
+    {
+      "value": "1e999",
+      "error": "response"
+    },
+    {
+      "value": [],
+      "error": "response"
+    },
+    {
+      "value": [
+        10,
+        20
+      ],
+      "error": "response"
+    }
+  ],
+  "dedupe": [
+    {
+      "values": [
+        10,
+        10
+      ],
+      "output": [
+        10
+      ]
+    },
+    {
+      "values": [
+        null,
+        10
+      ],
+      "output": [
+        10
+      ]
+    },
+    {
+      "values": [
+        10,
+        null
+      ],
+      "output": [
+        10
+      ]
+    },
+    {
+      "values": [
+        10,
+        20
+      ],
+      "error": "conflict"
+    }
+  ],
+  "check_response": [
+    {
+      "kind": "docs",
+      "res": {
+        "response": {
+          "numFound": 1,
+          "docs": [
+            {
+              "id": "a"
+            }
+          ]
+        }
+      },
+      "ok": true
+    },
+    {
+      "kind": "docs",
+      "res": {
+        "response": {
+          "numFound": 0
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "docs",
+      "res": {
+        "response": {
+          "numFound": -1,
+          "docs": []
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "docs",
+      "res": {
+        "response": {
+          "numFound": 1.5,
+          "docs": []
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "docs",
+      "res": {
+        "responseHeader": {
+          "partialResults": true
+        },
+        "response": {
+          "numFound": 0,
+          "docs": []
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "docs",
+      "res": {
+        "responseHeader": {
+          "status": 500
+        },
+        "response": {
+          "numFound": 0,
+          "docs": []
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "count",
+      "res": {
+        "response": {
+          "numFound": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "kind": "facet",
+      "res": {
+        "response": {
+          "numFound": 0
+        },
+        "facet_counts": {
+          "facet_fields": {
+            "anomes_s": []
+          }
+        }
+      },
+      "ok": true
+    },
+    {
+      "kind": "facet",
+      "res": {
+        "response": {
+          "numFound": 0
+        },
+        "facet_counts": {
+          "facet_fields": {
+            "anomes_s": [
+              "202401",
+              3
+            ]
+          }
+        }
+      },
+      "ok": true
+    },
+    {
+      "kind": "facet",
+      "res": {
+        "response": {
+          "numFound": 0
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "facet",
+      "res": {
+        "response": {
+          "numFound": 0
+        },
+        "facet_counts": {
+          "facet_fields": {
+            "anomes_s": [
+              "202413",
+              3
+            ]
+          }
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "facet",
+      "res": {
+        "response": {
+          "numFound": 0
+        },
+        "facet_counts": {
+          "facet_fields": {
+            "anomes_s": [
+              "202401",
+              3,
+              "202401",
+              2
+            ]
+          }
+        }
+      },
+      "error": "response"
+    },
+    {
+      "kind": "facet",
+      "res": {
+        "response": {
+          "numFound": 0
+        },
+        "facet_counts": {
+          "facet_fields": {
+            "anomes_s": [
+              "202401",
+              -1
+            ]
+          }
+        }
+      },
+      "error": "response"
+    }
+  ],
+  "drop_unpublished": [
+    {
+      "today": "2025-12-01",
+      "reference": "selection",
+      "period": [
+        "202506",
+        "202507",
+        "202508",
+        "202601"
+      ],
+      "field": [
+        "a_i",
+        "a_i",
+        "a_i",
+        "a_i"
+      ],
+      "value": [
+        10,
+        12,
+        0,
+        0
+      ],
+      "status": [
+        "published",
+        "published",
+        "unpublished",
+        "future"
+      ]
+    },
+    {
+      "today": "2025-12-01",
+      "reference": "selection",
+      "period": [
+        "202505",
+        "202506",
+        "202507"
+      ],
+      "field": [
+        "a_i",
+        "a_i",
+        "a_i"
+      ],
+      "value": [
+        5,
+        0,
+        7
+      ],
+      "status": [
+        "published",
+        "published",
+        "published"
+      ]
+    },
+    {
+      "today": "2025-12-01",
+      "reference": "selection",
+      "period": [
+        "202505",
+        "202506"
+      ],
+      "field": [
+        "a_i",
+        "b_i"
+      ],
+      "value": [
+        0,
+        3
+      ],
+      "status": [
+        "unpublished",
+        "published"
+      ]
+    },
+    {
+      "today": "2025-12-01",
+      "reference": "selection",
+      "period": [
+        "202505",
+        "202506"
+      ],
+      "field": [
+        "a_i",
+        "a_i"
+      ],
+      "value": [
+        5,
+        null
+      ],
+      "status": [
+        "published",
+        "missing"
+      ]
+    },
+    {
+      "today": "2025-12-01",
+      "reference": "selection",
+      "period": [
+        "202413"
+      ],
+      "field": [
+        "a_i"
+      ],
+      "value": [
+        1
+      ],
+      "error": "validation"
+    },
+    {
+      "today": "2025-12-01",
+      "reference": "selection",
+      "period": [
+        "202401"
+      ],
+      "field": [
+        null
+      ],
+      "value": [
+        1
+      ],
+      "error": "validation"
+    }
+  ]
+}

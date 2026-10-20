@@ -1,0 +1,64 @@
+# Tests of misocialpy on several systems and Python versions, plus one job
+# with the minimum versions declared in pyproject.toml. Tests run offline
+# (recorded responses); the live test is deselected by default.
+name: misocialpy
+
+on:
+  push:
+    paths:
+      - "misocialpy/**"
+      - "misocialr/inst/extdata/**"
+      - "misocialr/tests/testthat/api/**"
+      - "misocialr/tests/testthat/paridade/**"
+      - "sincronizar_python.py"
+      - ".github/workflows/misocialpy.yaml"
+  pull_request:
+    paths:
+      - "misocialpy/**"
+      - "misocialr/inst/extdata/**"
+      - "misocialr/tests/testthat/api/**"
+      - "misocialr/tests/testthat/paridade/**"
+      - "sincronizar_python.py"
+      - ".github/workflows/misocialpy.yaml"
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    name: ${{ matrix.os }} (Python ${{ matrix.python }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python: ["3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+        include:
+          - {os: windows-latest, python: "3.13"}
+          - {os: macos-latest, python: "3.13"}
+    defaults:
+      run:
+        working-directory: misocialpy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - run: ruff check . && ruff format --check .
+      - run: pytest -q
+      - name: Dictionary and fixtures identical to the R package
+        working-directory: .
+        run: python sincronizar_python.py --check
+
+  minimum-deps:
+    runs-on: ubuntu-latest
+    name: minimum dependency versions
+    defaults:
+      run:
+        working-directory: misocialpy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - run: pip install "pandas==1.3.5" "numpy<1.24" "requests==2.25.1" "pytest>=7" "responses>=0.23"
+      - run: pip install --no-deps -e .
+      - run: pytest -q

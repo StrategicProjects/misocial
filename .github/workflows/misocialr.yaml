@@ -1,0 +1,76 @@
+# R CMD check of misocialr on several systems and R versions, plus one job
+# with the minimum dependency versions declared in DESCRIPTION. Tests run
+# offline (recorded responses); nothing here calls the live API.
+name: misocialr
+
+on:
+  push:
+    paths:
+      - "misocialr/**"
+      - ".github/workflows/misocialr.yaml"
+  pull_request:
+    paths:
+      - "misocialr/**"
+      - ".github/workflows/misocialr.yaml"
+
+jobs:
+  check:
+    runs-on: ${{ matrix.os }}
+    name: ${{ matrix.os }} (R ${{ matrix.r }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest, r: release}
+          - {os: ubuntu-latest, r: oldrel-1}
+          - {os: ubuntu-latest, r: "4.1"}
+          - {os: windows-latest, r: release}
+          - {os: macos-latest, r: release}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      _R_CHECK_FORCE_SUGGESTS_: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.r }}
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          working-directory: misocialr
+          extra-packages: any::rcmdcheck
+          needs: check
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          working-directory: misocialr
+          args: 'c("--no-manual", "--as-cran")'
+          upload-snapshots: true
+
+  minimum-deps:
+    runs-on: ubuntu-latest
+    name: minimum dependency versions
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.1"
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          working-directory: misocialr
+          extra-packages: |
+            any::rcmdcheck
+            httr2@1.0.4
+            cli@3.6.0
+            dplyr@1.1.0
+            purrr@1.0.0
+            testthat@3.2.1
+          needs: check
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          working-directory: misocialr
+          args: 'c("--no-manual")'

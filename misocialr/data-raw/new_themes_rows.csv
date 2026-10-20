@@ -1,0 +1,99 @@
+theme|field|label|unit
+suas_rede|cadsuas_qtd_cras_i|Unidades CRAS|Unidades
+suas_rede|cadsuas_qtd_creas_i|Unidades CREAS|Unidades
+suas_rede|cadsuas_qtd_centro_pop_i|Unidades Centro POP|Unidades
+suas_rede|cadsuas_qtd_centro_convivencia_i|Centros de convivência|Unidades
+suas_rede|cadsuas_qtd_centro_dia_similares_i|Centros-dia e similares|Unidades
+suas_rede|cadsuas_qtd_unidade_acolhimento_i|Unidades de acolhimento|Unidades
+suas_rede|cadsuas_qtd_outras_redes_socio_assist_i|Outras unidades da rede socioassistencial|Unidades
+suas_rede|cadsuas_qtd_profissionais_cras_i|Profissionais em CRAS|Pessoas
+suas_rede|cadsuas_qtd_profissionais_creas_i|Profissionais em CREAS|Pessoas
+suas_rede|cadsuas_qtd_profissionais_centro_pop_i|Profissionais em Centros POP|Pessoas
+suas_rede|cadsuas_qtd_profissionais_centro_convivencia_i|Profissionais em centros de convivência|Pessoas
+suas_rede|cadsuas_qtd_profissionais_centro_dia_similares_i|Profissionais em centros-dia e similares|Pessoas
+suas_rede|cadsuas_qtd_profissionais_unidade_acolhimento_i|Profissionais em unidades de acolhimento|Pessoas
+suas_rede|cadsuas_qtd_profissionais_outras_redes_socio_assist_i|Profissionais em outras unidades da rede socioassistencial|Pessoas
+suas_rede|cadsuas_qtd_profissionais_secretaria_mun_i|Profissionais na secretaria municipal de assistência social|Pessoas
+suas_rede|cadsuas_qtd_profissionais_conselho_mun_i|Profissionais no conselho municipal de assistência social|Pessoas
+suas_rede|cadsuas_qtd_profissionais_fundo_mun_i|Profissionais no fundo municipal de assistência social|Pessoas
+suas_rede|cadsuas_qtd_profissionais_distintos_i|Profissionais distintos cadastrados no CadSUAS|Pessoas
+suas_financiamento|suas_repasse_mun_vl_total_fundo_f|Repasse do FNAS ao fundo municipal - total|R$
+suas_financiamento|suas_repasse_mun_vl_psb_f|Repasse do FNAS - Proteção Social Básica|R$
+suas_financiamento|suas_repasse_mun_vl_pse_f|Repasse do FNAS - Proteção Social Especial|R$
+suas_financiamento|suas_repasse_mun_vl_gestao_pbf_cadun_f|Repasse do FNAS - gestão do Bolsa Família e do Cadastro Único|R$
+suas_financiamento|suas_repasse_mun_vl_grupo_programas_f|Repasse do FNAS - grupo de programas|R$
+suas_financiamento|suas_repasse_mun_vl_pcf_f|Repasse do FNAS - Programa Criança Feliz|R$
+suas_financiamento|suas_repasse_mun_vl_sem_classificacao_f|Repasse do FNAS - sem classificação|R$
+suas_financiamento|suas_repasse_mun_vl_fundo_a_fundo_f|Repasse do FNAS - rubrica fundo a fundo|R$
+suas_financiamento|suas_saldo_cc_mun_vl_total_geral_f|Saldo em conta do fundo municipal - total geral|R$
+suas_financiamento|suas_saldo_cc_mun_vl_bloco_psb_f|Saldo em conta - bloco Proteção Social Básica|R$
+suas_financiamento|suas_saldo_cc_mun_vl_bloco_pse_media_complexidade_f|Saldo em conta - bloco Proteção Social Especial de média complexidade|R$
+suas_financiamento|suas_saldo_cc_mun_vl_bloco_gestao_suas_f|Saldo em conta - bloco gestão do SUAS|R$
+suas_financiamento|suas_saldo_cc_mun_vl_bloco_gestao_pbf_cadun_f|Saldo em conta - bloco gestão do Bolsa Família e do Cadastro Único|R$
+suas_financiamento|suas_saldo_cc_mun_vl_grupo_programas_f|Saldo em conta - grupo de programas|R$
+suas_financiamento|suas_saldo_cc_mun_vl_pcf_f|Saldo em conta - Programa Criança Feliz|R$
+suas_financiamento|suas_saldo_cc_mun_vl_procad_suas_f|Saldo em conta - ProcadSUAS|R$
+suas_financiamento|igdm_f|Índice de Gestão Descentralizada Municipal (IGD-M)|Índice
+suas_financiamento|teto_rep_igdm_f|IGD-M - teto de repasse|R$
+suas_financiamento|vl_cal_sem_icent_f|IGD-M - valor calculado sem incentivos|R$
+suas_financiamento|vl_tot_incent_f|IGD-M - valor dos incentivos|R$
+suas_financiamento|vl_cal_com_incent_f|IGD-M - valor calculado com incentivos|R$
+suas_financiamento|vl_rep_mes_f|IGD-M - valor repassado no mês|R$
+pbf_condicionalidades|sicon_qtde_benef_perfil_educacao_4_17_anos_apartir_2023_l|Educação: beneficiários de 4 a 17 anos com perfil para acompanhamento|Pessoas
+pbf_condicionalidades|sicon_qtde_benef_acomp_educacao_4_17_anos_apartir_2023_l|Educação: beneficiários de 4 a 17 anos acompanhados|Pessoas
+pbf_condicionalidades|sicon_perc_benef_acomp_educacao_4_17_anos_apartir_2023_d|Educação: percentual de beneficiários de 4 a 17 anos acompanhados|%
+pbf_condicionalidades|sicon_perc_benef_acomp_educacao_4_5_anos_apartir_2023_d|Educação: percentual de beneficiários de 4 a 5 anos acompanhados|%
+pbf_condicionalidades|sicon_perc_benef_acomp_educacao_6_15_anos_apartir_2023_d|Educação: percentual de beneficiários de 6 a 15 anos acompanhados|%
+pbf_condicionalidades|sicon_perc_benef_acomp_educacao_16_17_anos_apartir_2023_d|Educação: percentual de beneficiários de 16 a 17 anos acompanhados|%
+pbf_condicionalidades|sicon_qtde_acomp_freq_acima_4_17_anos_apartir_2023_l|Educação: beneficiários de 4 a 17 anos acompanhados com frequência acima do mínimo|Pessoas
+pbf_condicionalidades|sicon_perc_acomp_freq_acima_4_17_anos_apartir_2023_d|Educação: percentual dos acompanhados de 4 a 17 anos com frequência acima do mínimo|%
+pbf_condicionalidades|sicon_qtde_benef_sem_info_freq_4_17_anos_apartir_2023_l|Educação: beneficiários de 4 a 17 anos sem informação de frequência|Pessoas
+pbf_condicionalidades|sicon_qtde_benef_nao_localizados_4_17_anos_apartir_2023_l|Educação: beneficiários de 4 a 17 anos não localizados|Pessoas
+pbf_condicionalidades|sicon_qtde_pessoas_perfil_saude_apartir_2023_l|Saúde: pessoas com perfil para acompanhamento|Pessoas
+pbf_condicionalidades|sicon_qtde_acompanhadas_saude_apartir_2023_l|Saúde: pessoas acompanhadas|Pessoas
+pbf_condicionalidades|sicon_perc_acompanhadas_saude_apartir_2023_d|Saúde: percentual de pessoas acompanhadas|%
+pbf_condicionalidades|sicon_qtde_criancas_perfil_saude_apartir_2023_l|Saúde: crianças com perfil para acompanhamento|Pessoas
+pbf_condicionalidades|sicon_qtde_criancas_acompanhadas_apartir_2023_l|Saúde: crianças acompanhadas|Pessoas
+pbf_condicionalidades|sicon_qtde_criancas_vacinacao_em_dia_apartir_2023_l|Saúde: crianças com vacinação em dia|Pessoas
+pbf_condicionalidades|sicon_qtde_criancas_dados_nutricionais_apartir_2023_l|Saúde: crianças com dados nutricionais registrados|Pessoas
+pbf_condicionalidades|sicon_qtde_mulheres_perfil_saude_apartir_2023_l|Saúde: mulheres com perfil para acompanhamento|Pessoas
+pbf_condicionalidades|sicon_qtde_mulheres_acompanhadas_apartir_2023_l|Saúde: mulheres acompanhadas|Pessoas
+pbf_condicionalidades|sicon_qtde_gestantes_acompanhadas_apartir_2023_l|Saúde: gestantes acompanhadas|Pessoas
+pbf_condicionalidades|sicon_qtde_gestantes_prenatal_em_dia_apartir_2023_l|Saúde: gestantes com pré-natal em dia|Pessoas
+pbf_condicionalidades|sicon_qtde_repercursoes_desc_cond_bf_apartir_2023_l|Repercussões por descumprimento de condicionalidades (BF)|Registros
+pbf_condicionalidades|sicon_qtde_advertencia_bf_apartir_2023_l|Advertências por descumprimento (BF)|Registros
+pbf_condicionalidades|sicon_qtde_bloqueio_bf_apartir_2023_l|Bloqueios por descumprimento (BF)|Registros
+pbf_condicionalidades|sicon_qtde_suspensao_bf_apartir_2023_l|Suspensões por descumprimento (BF)|Registros
+pbf_condicionalidades|sicon_qtde_cancelamento_bf_apartir_2023_l|Cancelamentos por descumprimento (BF)|Registros
+pbf_condicionalidades|sicon_qtde_repercursoes_desc_cond_bva_apartir_2023_l|Repercussões por descumprimento de condicionalidades (BVA)|Registros
+pbf_condicionalidades|sicon_qtde_advertencia_bva_apartir_2023_l|Advertências por descumprimento (BVA)|Registros
+pbf_condicionalidades|sicon_qtde_bloqueio_bva_apartir_2023_l|Bloqueios por descumprimento (BVA)|Registros
+pbf_condicionalidades|sicon_qtde_suspensao_bva_apartir_2023_l|Suspensões por descumprimento (BVA)|Registros
+pbf_condicionalidades|sicon_qtde_cancelamento_bva_apartir_2023_l|Cancelamentos por descumprimento (BVA)|Registros
+pbf_condicionalidades|sicon_qtd_famlilias_fase_suspensao_apartir_2023_l|Famílias em fase de suspensão|Famílias
+pbf_condicionalidades|sicon_qtd_fam_fase_susp_acomp_registrado_apartir_2023_l|Famílias em fase de suspensão com acompanhamento familiar registrado|Famílias
+pbf_condicionalidades|tx_acomp_freq_escol_f|Taxa de acompanhamento da frequência escolar (componente do IGD-M)|Proporção
+pbf_condicionalidades|tx_acomp_agenda_saude_f|Taxa de acompanhamento da agenda de saúde (componente do IGD-M)|Proporção
+seguranca_alimentar|recur_pagos_agricul_paa_f|PAA: recursos pagos a agricultores familiares|R$
+seguranca_alimentar|agricultores_fornec_paa_i|PAA: agricultores familiares fornecedores|Pessoas
+seguranca_alimentar|paa_qtd_agricul_familiar_sexo_feminino_i|PAA: agricultoras familiares (sexo feminino)|Pessoas
+seguranca_alimentar|paa_qtd_agricul_familiar_sexo_masculino_i|PAA: agricultores familiares (sexo masculino)|Pessoas
+seguranca_alimentar|paa_qtd_agricul_familiar_modal_compra_doacao_simul_i|PAA: agricultores na modalidade Compra com Doação Simultânea|Pessoas
+seguranca_alimentar|paa_indicador_adesao_municipio_i|PAA: município com termo de adesão (1 = sim)|Indicador
+seguranca_alimentar|formento_qtd_total_familias_benef_i|Fomento Rural: famílias beneficiárias no mês|Famílias
+seguranca_alimentar|formento_qtd_familias_beneficiarias_acumulado_i|Fomento Rural: famílias beneficiárias (acumulado)|Famílias
+seguranca_alimentar|formento_qtd_rf_sexo_feminino_i|Fomento Rural: responsáveis familiares mulheres|Pessoas
+seguranca_alimentar|formento_qtd_rf_sexo_masculino_i|Fomento Rural: responsáveis familiares homens|Pessoas
+seguranca_alimentar|fomento_vl_recuros_disponibilizados_as_familias_f|Fomento Rural: recursos disponibilizados às famílias no mês|R$
+seguranca_alimentar|fomento_vl_recuros_disponibilizados_as_familias_ano_f|Fomento Rural: recursos disponibilizados às famílias no ano|R$
+seguranca_alimentar|formento_qtd_fam_benef_agrilcultores_familiares_i|Fomento Rural: famílias de agricultores familiares|Famílias
+seguranca_alimentar|formento_qtd_fam_benef_indinegas_i|Fomento Rural: famílias indígenas|Famílias
+seguranca_alimentar|formento_qtd_fam_benef_quilombolas_i|Fomento Rural: famílias quilombolas|Famílias
+seguranca_alimentar|formento_qtd_fam_benef_extrativistas_i|Fomento Rural: famílias extrativistas|Famílias
+seguranca_alimentar|formento_qtd_fam_benef_pescadores_artesanais_i|Fomento Rural: famílias de pescadores artesanais|Famílias
+seguranca_alimentar|formento_qtd_fam_benef_assentados_ref_agraria_i|Fomento Rural: famílias assentadas da reforma agrária|Famílias
+seguranca_alimentar|formento_qtd_fam_benef_ribeirinhas_i|Fomento Rural: famílias ribeirinhas|Famílias
+seguranca_alimentar|qtd_cisternas_entregues_total_mds_i|Cisternas entregues pelo MDS - total (acumulado)|Unidades
+seguranca_alimentar|qtd_cisternas_entregues_consumo_mds_i|Cisternas entregues pelo MDS - água para consumo (acumulado)|Unidades
+seguranca_alimentar|qtd_cisternas_entregues_producao_mds_i|Cisternas entregues pelo MDS - água para produção (acumulado)|Unidades
+seguranca_alimentar|qtd_cisternas_entregues_escolar_mds_i|Cisternas entregues pelo MDS - escolares (acumulado)|Unidades

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "misocialpy"
+version = "0.4.0"
+description = "Access the Brazilian MDS Social Information Matrix (MI Social) API from Python"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+    { name = "André Leite", email = "leite@castlab.org" },
+    { name = "Marcos Wasiliew", email = "marcos.wasiliew@gmail.com" },
+    { name = "Hugo Vasconcelos", email = "hugo.vasconcelos@ufpe.br" },
+    { name = "Carlos Amorim", email = "carlos.agaf@ufpe.br" },
+    { name = "Diogo Bezerra", email = "diogo.bezerra@ufpe.br" },
+]
+keywords = ["MDS", "Cadastro Unico", "Bolsa Familia", "BPC", "SUAS", "Brazil", "open-data", "pandas"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.25",
+    "pandas>=1.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/StrategicProjects/misocial"
+Repository = "https://github.com/StrategicProjects/misocial"
+Issues = "https://github.com/StrategicProjects/misocial/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=7", "responses>=0.23"]
+dev = ["pytest>=7", "responses>=0.23", "ruff>=0.6", "build>=1.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/misocialpy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: hits the real MI Social API (run with -m live)"]
+addopts = "-m 'not live'"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

@@ -1,0 +1,48 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":5,
+    "params":{
+      "q":"*:*",
+      "fl":"id,codigo_ibge,municipio,sigla_uf,anomes_s,qtd_familias_beneficiarias_bolsa_familia_i,bpc_ben_i",
+      "cursorMark":"*",
+      "fq":["anomes_s:(202402 OR 202509)",
+        "codigo_ibge:(261160 OR 260790)"],
+      "sort":"id asc",
+      "rows":"10000",
+      "wt":"json"}},
+  "response":{"numFound":4,"start":0,"docs":[
+      {
+        "sigla_uf":"PE",
+        "anomes_s":"202402",
+        "bpc_ben_i":19273,
+        "municipio":"JABOATÃO DOS GUARARAPES",
+        "codigo_ibge":"260790",
+        "id":"mes_mu26079020240201",
+        "qtd_familias_beneficiarias_bolsa_familia_i":98637},
+      {
+        "sigla_uf":"PE",
+        "anomes_s":"202509",
+        "bpc_ben_i":21509,
+        "municipio":"JABOATÃO DOS GUARARAPES",
+        "codigo_ibge":"260790",
+        "id":"mes_mu26079020250901",
+        "qtd_familias_beneficiarias_bolsa_familia_i":84882},
+      {
+        "sigla_uf":"PE",
+        "anomes_s":"202402",
+        "bpc_ben_i":90187,
+        "municipio":"RECIFE",
+        "codigo_ibge":"261160",
+        "id":"mes_mu26116020240201",
+        "qtd_familias_beneficiarias_bolsa_familia_i":146737},
+      {
+        "sigla_uf":"PE",
+        "anomes_s":"202509",
+        "bpc_ben_i":102941,
+        "municipio":"RECIFE",
+        "codigo_ibge":"261160",
+        "id":"mes_mu26116020250901",
+        "qtd_familias_beneficiarias_bolsa_familia_i":139452}]
+  },
+  "nextCursorMark":"AoE0bWVzX211MjYxMTYwMjAyNTA5MDE="}

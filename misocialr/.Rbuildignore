@@ -1,0 +1,14 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^DESIGN\.md$
+^README\.Rmd$
+^data-raw$
+^\.lintr$
+^vignettes/.*\.Rmd\.orig$
+^vignettes/precompile\.R$
+^tests/testthat/api\.bak$
+^tests/testthat/_problems$
+^LICENSE\.md$
+^cran-comments\.md$
+^CRAN-SUBMISSION$
+\.DS_Store$
