@@ -38,4 +38,7 @@ jobs:
         with:
           name: dist
           path: dist/
-      - uses: pypa/gh-action-pypi-publish@a892a5a61159132606e93a2fa6f4358831b04d26 # v1.14.2
+      # A Docker action: it resolves its container image from the git ref,
+      # so a commit-SHA pin fails with "manifest unknown" — pin the release
+      # tag instead (PyPA's documented practice).
+      - uses: pypa/gh-action-pypi-publish@v1.14.2
