@@ -1,3 +1,8 @@
+# misocialpy 0.4.0.post1
+
+Metadata only: adds Júlia Nascimento Barreto to the authors. No code
+changes.
+
 # misocialpy 0.4.0
 
 Same changes as misocialr 0.4.0: paging by `cursorMark`, `nature` and

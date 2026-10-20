@@ -11,7 +11,9 @@ Authors@R: c(
     person("Carlos", "Amorim", email = "carlos.agaf@ufpe.br", role = "aut",
            comment = c(ORCID = "0000-0001-6315-8305")),
     person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut",
-           comment = c(ORCID = "0000-0002-1216-8674")))
+           comment = c(ORCID = "0000-0002-1216-8674")),
+    person("Júlia", "Nascimento Barreto", email = "juliabarreto@gd.seplag.pe.gov.br", role = "aut",
+           comment = c(ORCID = "0009-0004-2851-7770")))
 Description: 'Tidyverse'-friendly interface to the 'MI Social' API of the Brazilian
     Ministry of Development and Social Assistance ('MDS', 'SAGI')
     <https://aplicacoes.mds.gov.br/sagi/servicos/misocial>. Retrieves monthly

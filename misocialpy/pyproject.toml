@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "misocialpy"
-version = "0.4.0"
+version = "0.4.0.post1"
 description = "Access the Brazilian MDS Social Information Matrix (MI Social) API from Python"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -15,6 +15,7 @@ authors = [
     { name = "Hugo Vasconcelos", email = "hugo.vasconcelos@ufpe.br" },
     { name = "Carlos Amorim", email = "carlos.agaf@ufpe.br" },
     { name = "Diogo Bezerra", email = "diogo.bezerra@ufpe.br" },
+    { name = "Júlia Nascimento Barreto", email = "juliabarreto@gd.seplag.pe.gov.br" },
 ]
 keywords = ["MDS", "Cadastro Unico", "Bolsa Familia", "BPC", "SUAS", "Brazil", "open-data", "pandas"]
 classifiers = [
