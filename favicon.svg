@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 231" width="200" height="231"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><defs>
+    <linearGradient id="bg" x1="4.5" y1="0.3" x2="195.5" y2="203.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#0b4d3c;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#209b74;stop-opacity:1"></stop>
+    </linearGradient>
+    <linearGradient id="p1" x1="62" y1="148" x2="62" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#f39c12"></stop>
+      <stop offset="100%" style="stop-color:#f7dc6f"></stop>
+    </linearGradient>
+    <linearGradient id="p2" x1="100" y1="148" x2="100" y2="69" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#2e86c1"></stop>
+      <stop offset="100%" style="stop-color:#85c1e9"></stop>
+    </linearGradient>
+    <linearGradient id="p3" x1="134" y1="148" x2="134" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#cb4335"></stop>
+      <stop offset="100%" style="stop-color:#ec7063"></stop>
+    </linearGradient>
+  </defs><path d="m 100,2 94,50 V 152 L 100,202 6,152 V 52 Z" fill="url(#bg)" stroke="#06342a" stroke-width="3"></path><g transform="matrix(0.82809145,0,0,0.82809145,17.190855,5.0305487)">
+    <!-- Grid lines -->
+    <line x1="38" y1="68" x2="162" y2="68" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5"></line>
+    <line x1="38" y1="88" x2="162" y2="88" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5"></line>
+    <line x1="38" y1="108" x2="162" y2="108" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5"></line>
+    <line x1="38" y1="128" x2="162" y2="128" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.5"></line>
+    <line x1="38" y1="148" x2="162" y2="148" stroke="#ffffff" stroke-opacity="0.12" stroke-width="0.8"></line>
+    <!-- Family: two adults and a child -->
+    <circle cx="62" cy="86" r="10" fill="url(#p1)" opacity="0.92"></circle>
+    <path d="M 48,148 v -34 a 14,14 0 0 1 28,0 v 34 z" fill="url(#p1)" opacity="0.92"></path>
+    <circle cx="100" cy="80" r="11" fill="url(#p2)" opacity="0.92"></circle>
+    <path d="M 85,148 v -38 a 15,15 0 0 1 30,0 v 38 z" fill="url(#p2)" opacity="0.92"></path>
+    <circle cx="134" cy="104" r="8" fill="url(#p3)" opacity="0.92"></circle>
+    <path d="M 123,148 v -22 a 11,11 0 0 1 22,0 v 22 z" fill="url(#p3)" opacity="0.92"></path>
+    <!-- Monthly series -->
+    <polyline points="44,64 84,48 124,58 156,42" fill="none" stroke="#06342a" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,2)"></polyline>
+    <polyline points="44,64 84,48 124,58 156,42" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"></polyline>
+    <circle cx="44" cy="64" r="4" fill="#ffffff" opacity="0.95"></circle>
+    <circle cx="44" cy="64" r="2" fill="#0b4d3c"></circle>
+    <circle cx="84" cy="48" r="4" fill="#ffffff" opacity="0.95"></circle>
+    <circle cx="84" cy="48" r="2" fill="#0b4d3c"></circle>
+    <circle cx="124" cy="58" r="4" fill="#ffffff" opacity="0.95"></circle>
+    <circle cx="124" cy="58" r="2" fill="#0b4d3c"></circle>
+    <circle cx="156" cy="42" r="4" fill="#ffffff" opacity="0.95"></circle>
+    <circle cx="156" cy="42" r="2" fill="#0b4d3c"></circle>
+  </g><text x="100" y="168" text-anchor="middle" font-family="'Fira Code', 'Courier New', monospace" font-size="21.5px" font-weight="700" fill="#ffffff" letter-spacing="1.5">misocialr</text></svg>
