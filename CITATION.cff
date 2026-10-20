@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "misocial: Access the Brazilian MDS Social Information Matrix (MI Social) API from R and Python"
+version: 0.4.0
+date-released: 2026-10-20
+license: MIT
+repository-code: "https://github.com/StrategicProjects/misocial"
+url: "https://strategicprojects.github.io/misocial/"
+keywords:
+  - MDS
+  - SAGI
+  - Cadastro Único
+  - Bolsa Família
+  - BPC
+  - SUAS
+  - social assistance
+  - open data
+  - Brazil
+  - R
+  - Python
+authors:
+  - family-names: Leite
+    given-names: "André"
+    email: leite@castlab.org
+    affiliation: "Universidade Federal de Pernambuco"
+    orcid: "https://orcid.org/0000-0002-4718-9766"
+  - family-names: Wasiliew
+    given-names: Marcos
+    email: marcos.wasiliew@gmail.com
+    orcid: "https://orcid.org/0009-0004-4694-3159"
+  - family-names: Vasconcelos
+    given-names: Hugo
+    email: hugo.vasconcelos@ufpe.br
+    affiliation: "Universidade Federal de Pernambuco"
+    orcid: "https://orcid.org/0000-0001-6249-0920"
+  - family-names: Amorim
+    given-names: Carlos
+    email: carlos.agaf@ufpe.br
+    affiliation: "Universidade Federal de Pernambuco"
+    orcid: "https://orcid.org/0000-0001-6315-8305"
+  - family-names: Bezerra
+    given-names: Diogo
+    email: diogo.bezerra@ufpe.br
+    affiliation: "Universidade Federal de Pernambuco"
+    orcid: "https://orcid.org/0000-0002-1216-8674"
+  - family-names: Nascimento Barreto
+    given-names: Júlia
+    email: juliabarreto@gd.seplag.pe.gov.br
+    orcid: "https://orcid.org/0009-0004-2851-7770"
+abstract: >-
+  Tidyverse-friendly R and pandas-friendly Python interfaces to the MI Social
+  API (Matriz de Informação Social) of the Brazilian Ministry of Development
+  and Social Assistance (MDS/SAGI). Monthly municipal series of the Cadastro
+  Único, the Bolsa Família programme and its conditionalities, the BPC
+  benefit, the social assistance network (SUAS) and its funding, and food
+  security programmes, as tidy long-format tibbles and DataFrames.
