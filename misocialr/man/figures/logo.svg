@@ -58,7 +58,7 @@
     <circle cx="156" cy="42" r="2" fill="#0b4d3c"/>
   </g>
   <!-- Package name -->
-  <text x="100" y="168" text-anchor="middle"
+  <text x="100" y="160" text-anchor="middle"
         font-family="'Fira Code', 'Courier New', monospace"
         font-size="21.5px" font-weight="700" fill="#ffffff"
         letter-spacing="1.5">misocialr</text>
