@@ -32,7 +32,7 @@ Imports:
     cli (>= 3.6.1),
     tibble,
     purrr (>= 1.0.0),
-    dplyr (>= 1.1.0),
+    dplyr (>= 1.1.1),
     rlang,
     utils
 Suggests:

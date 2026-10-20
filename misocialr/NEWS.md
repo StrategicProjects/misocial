@@ -16,8 +16,11 @@
   is the longest monthly series, not a yearly total.
 * `options(misocialr.cache_ttl = seconds)`: optional cache validity (the
   default remains the session).
-* DESCRIPTION: `cli (>= 3.6.1)` — the declared minimum versions were not
-  co-installable, since `testthat` 3.2.1 requires `cli >= 3.6.1`.
+* DESCRIPTION: `cli (>= 3.6.1)` and `dplyr (>= 1.1.1)` — the declared
+  minimum versions were not usable together today: `testthat` 3.2.1
+  requires `cli >= 3.6.1`, and `dplyr` 1.1.0 calls the vctrs C routine
+  `vec_is_vector`, removed in vctrs 0.7.0 (checked in the CI job that
+  installs the minimum versions).
 
 # misocialr 0.3.1
 

@@ -42,7 +42,7 @@ The fields of each theme are in `mds_fields()`. Any other field of the API
 remotes::install_github("StrategicProjects/misocial", subdir = "misocialr")
 ```
 
-Requires R >= 4.1, httr2 >= 1.0.4, cli >= 3.6.1, dplyr >= 1.1.0 and
+Requires R >= 4.1, httr2 >= 1.0.4, cli >= 3.6.1, dplyr >= 1.1.1 and
 purrr >= 1.0.0 (tests: testthat >= 3.2.1).
 
 ## Usage
