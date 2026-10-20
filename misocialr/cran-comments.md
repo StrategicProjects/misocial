@@ -17,6 +17,7 @@ recorded responses (httptest2 fixtures and a local webfakes server).
 ## Test environments
 
 * local: macOS (aarch64-apple-darwin), R 4.6.0
+* win-builder: R-devel
 * GitHub Actions: ubuntu-latest (release, oldrel-1, 4.1), windows-latest
   (release), macos-latest (release), plus one job with the minimum declared
   dependency versions
