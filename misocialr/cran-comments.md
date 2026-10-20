@@ -1,9 +1,6 @@
 ## Submission: misocialr 0.4.0
 
-This is a new submission, replacing today's earlier upload of the same
-version: it adds an author who had been inadvertently omitted from
-Authors@R, with no code changes — please consider only this one.
-The package is a tidyverse-friendly client for
+This is a new submission. The package is a tidyverse-friendly client for
 the MI Social API of the Brazilian Ministry of Development and Social
 Assistance (MDS/SAGI).
 
