@@ -5,6 +5,10 @@ CLAUDE.local.md
 .claude/
 plano/
 plano_misocial.html
+REVISAO_*.md
+ANALISE_*.md
+RELATORIO_*.md
+ESTADO_*.md
 misocialr/docs/
 .Rhistory
 *.Rcheck/

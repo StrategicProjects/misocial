@@ -21,9 +21,6 @@ identical, and 65 shared behaviour cases
 (`misocialr/tests/testthat/paridade/casos.json`) keep validation and error
 behaviour in parity.
 
-The `REVISAO_*.md`, `ANALISE_*.md` and `RELATORIO_*.md` files at the root
-are the review reports (in Portuguese) referenced by the changelogs.
-
 ## License
 
 MIT, see each package's LICENSE file.

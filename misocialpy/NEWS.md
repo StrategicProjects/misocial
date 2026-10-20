@@ -6,8 +6,7 @@ Rural `..._ano_f` field and `set_cache_ttl(seconds)`.
 
 # misocialpy 0.3.1
 
-Same fixes as misocialr 0.3.1 (details in `REVISAO_FINAL_2026-10-19.md` at
-the repository root), plus the Python-specific ones:
+Same fixes as misocialr 0.3.1, plus the Python-specific ones:
 
 * Results of `mds_periods()`, `mds_api_fields()` and `mds_localities()` are
   copies: editing a result no longer changes the cache (F1).
@@ -26,8 +25,7 @@ the repository root), plus the Python-specific ones:
 
 # misocialpy 0.3.0
 
-Same fixes as misocialr 0.3.0 (details in `REVISAO_PROFUNDA_2026-10-19.md`
-at the repository root): single response contract, no caching of incomplete
+Same fixes as misocialr 0.3.0: single response contract, no caching of incomplete
 responses; `mds_localities()` paged and validated, with `period` and
 `refresh`; `mds_drop_unpublished()` never deleting a non-zero value, with a
 normalised period and `action="flag"`; identity and scalar value per
@@ -40,8 +38,7 @@ documents.
 
 # misocialpy 0.2.1
 
-Same fixes as misocialr 0.2.1 (details in `REVISAO_2026-10-19.md` at the
-repository root): locality and period validated (empty, `None`, `NaN`,
+Same fixes as misocialr 0.2.1: locality and period validated (empty, `None`, `NaN`,
 non-integer, wrong check digit, invalid next to `"BR"`), text field as a
 `ValidationError` (previously a `ValueError` without context), incomplete
 or partial response as an `MdsError`, `mds_api_fields()` paged,
