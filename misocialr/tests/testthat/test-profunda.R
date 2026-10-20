@@ -1,5 +1,5 @@
-# Cases from the deep review of 0.2.1 (ANALISE_PROFUNDA_MISOCIALR_2026-10-19.md;
-# fixes in NEWS.md, 0.3.0).
+# Cases from the deep review of 0.2.1
+# (fixes in NEWS.md, 0.3.0).
 
 clear <- function(env = parent.frame()) {
   suppressMessages(mds_clear_cache())

@@ -1,5 +1,5 @@
-# Cases from the final report on 0.3.0 (RELATORIO_FINAL_PROJETO_2026-10-19.md;
-# fixes in NEWS.md, 0.3.1). Parity cases are in test-paridade.R.
+# Cases from the final report on 0.3.0
+# (fixes in NEWS.md, 0.3.1). Parity cases are in test-paridade.R.
 
 clear <- function(env = parent.frame()) {
   suppressMessages(mds_clear_cache())
