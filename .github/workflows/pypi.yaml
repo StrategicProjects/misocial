@@ -45,3 +45,5 @@ jobs:
       # so a commit-SHA pin fails with "manifest unknown" — pin the release
       # tag instead (PyPA's documented practice).
       - uses: pypa/gh-action-pypi-publish@v1.14.2
+        with:
+          skip-existing: true
