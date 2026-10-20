@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg)
 ![](https://img.shields.io/badge/devel%20version-0.4.0-blue.svg)
 [![misocialpy](https://github.com/StrategicProjects/misocial/actions/workflows/misocialpy.yaml/badge.svg)](https://github.com/StrategicProjects/misocial/actions/workflows/misocialpy.yaml)
+[![PyPI](https://img.shields.io/pypi/v/misocialpy.svg)](https://pypi.org/project/misocialpy/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23504084.svg)](https://doi.org/10.5281/zenodo.23504084)
 <!-- badges: end -->
 
 Pandas-friendly Python interface to the **MI Social** API (Matriz de
