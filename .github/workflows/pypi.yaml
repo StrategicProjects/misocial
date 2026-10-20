@@ -1,0 +1,41 @@
+# Publishes misocialpy to PyPI via trusted publishing (OIDC, no token).
+# Runs on tags misocialpy-v* (e.g. misocialpy-v0.4.0) or manually.
+name: pypi
+
+on:
+  push:
+    tags: ["misocialpy-v*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: misocialpy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build twine
+      - run: python -m build
+      - run: twine check dist/*
+      - run: pip install dist/*.whl && python -I -c "import misocialpy; print(misocialpy.__version__)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: misocialpy/dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@a892a5a61159132606e93a2fa6f4358831b04d26 # v1.14.2
