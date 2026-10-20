@@ -1,0 +1,54 @@
+url: https://strategicprojects.github.io/misocial/
+
+navbar:
+  structure:
+    left:  [intro, reference, news]
+    right: [search, github]
+
+home:
+  title: "misocialr: Access the Brazilian MDS Social Information Matrix (MI Social) API from R"
+  description: >
+    Tidyverse-friendly interface to the MI Social API of the Brazilian
+    Ministry of Development and Social Assistance (MDS/SAGI). Monthly
+    municipal series of the Cadastro Unico, the Bolsa Familia programme and
+    its conditionalities, the BPC benefit, the social assistance network
+    (SUAS) and its funding, and food security programmes as tidy
+    long-format tibbles.
+
+reference:
+  - title: "Retrieve data"
+    desc: "The main retrieval function and one shortcut per theme."
+    contents:
+      - mds_data
+      - mds_cadunico
+      - mds_bolsa_familia
+      - mds_bpc_suas
+      - mds_suas_rede
+      - mds_suas_financiamento
+      - mds_pbf_condicionalidades
+      - mds_seguranca_alimentar
+
+  - title: "Discover themes, fields, periods and localities"
+    desc: "The curated dictionary, everything the API has, and what is available where and when."
+    contents:
+      - mds_themes
+      - mds_fields
+      - mds_api_fields
+      - mds_periods
+      - mds_localities
+
+  - title: "Publication status"
+    desc: "The API answers 0 for months not yet published; remove or flag them explicitly."
+    contents:
+      - mds_drop_unpublished
+
+  - title: "Utilities"
+    desc: "Helpers and cache management."
+    contents:
+      - ibge_code7
+      - mds_clear_cache
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with

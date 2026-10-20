@@ -12,3 +12,7 @@
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
 \.DS_Store$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^build_site\.R$

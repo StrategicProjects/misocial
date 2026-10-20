@@ -1,4 +1,4 @@
-# misocialr
+# misocialr <img src="man/figures/logo.svg" align="right" height="139" />
 
 <!-- badges: start -->
 ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg)

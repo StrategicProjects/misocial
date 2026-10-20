@@ -21,7 +21,8 @@ Description: 'Tidyverse'-friendly interface to the 'MI Social' API of the Brazil
     'CREAS' and other units), 'SUAS' funding, Bolsa Familia conditionalities
     and food security programmes as tidy long-format tibbles.
 License: MIT + file LICENSE
-URL: https://github.com/StrategicProjects/misocial
+URL: https://strategicprojects.github.io/misocial/,
+    https://github.com/StrategicProjects/misocial
 BugReports: https://github.com/StrategicProjects/misocial/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

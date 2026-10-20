@@ -1,5 +1,6 @@
 .DS_Store
 .Rproj.user
+misocialr/docs/
 .Rhistory
 *.Rcheck/
 misocialr_*.tar.gz
