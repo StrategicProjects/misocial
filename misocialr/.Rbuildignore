@@ -16,3 +16,6 @@
 ^docs$
 ^pkgdown$
 ^build_site\.R$
+^CLAUDE\.md$
+^CLAUDE\.local\.md$
+^\.claude$

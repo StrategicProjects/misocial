@@ -1,5 +1,10 @@
 .DS_Store
 .Rproj.user
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+plano/
+plano_misocial.html
 misocialr/docs/
 .Rhistory
 *.Rcheck/
