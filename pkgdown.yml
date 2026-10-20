@@ -2,8 +2,10 @@ pandoc: 3.8.3
 pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
+  api-concepts: api-concepts.html
+  bolsa-familia: bolsa-familia.html
   getting-started: getting-started.html
-last_built: 2026-10-20T14:32Z
+last_built: 2026-10-20T14:40Z
 urls:
   reference: https://strategicprojects.github.io/misocial/reference
   article: https://strategicprojects.github.io/misocial/articles
