@@ -55,7 +55,7 @@
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.1" id="misocialr-031">misocialr 0.3.1<a class="anchor" aria-label="anchor" href="#misocialr-031"></a></h2>
-<p>Fixes from the final report on 0.3.0 and the parallel verification (details in <code>REVISAO_FINAL_2026-10-19.md</code> at the repository root).</p>
+<p>Fixes from the final report on 0.3.0 and the parallel verification.</p>
 <ul><li>
 <strong>Queries by POST.</strong> With many months, fields and codes, the GET URL exceeded the server limit (HTTP 414, reproduced with 35 fields, 288 months and 200 municipalities). The query now goes in the body; the same query returned 136,989 rows.</li>
 <li>
@@ -76,7 +76,7 @@
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.0" id="misocialr-030">misocialr 0.3.0<a class="anchor" aria-label="anchor" href="#misocialr-030"></a></h2>
-<p>Fixes from the in-depth analysis of 0.2.1 (details in <code>REVISAO_PROFUNDA_2026-10-19.md</code> at the repository root).</p>
+<p>Fixes from the in-depth analysis of 0.2.1.</p>
 <ul><li>Single response contract (<code>check_response()</code>): a partial result, a <code>responseHeader$status</code> other than 0, an invalid <code>numFound</code> and missing <code>docs</code> or <code>facet_counts</code> are errors, including in <code><a href="../reference/mds_periods.html">mds_periods()</a></code>, <code><a href="../reference/mds_localities.html">mds_localities()</a></code> and the field check. Only complete responses enter the cache (B1, B2, B8).</li>
 <li>
 <code><a href="../reference/mds_localities.html">mds_localities()</a></code> pages, checks codes and repetitions and gains <code>period</code> and <code>refresh</code> (B2).</li>
@@ -97,7 +97,7 @@
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.1" id="misocialr-021">misocialr 0.2.1<a class="anchor" aria-label="anchor" href="#misocialr-021"></a></h2>
-<p>Fixes from the external review of 0.2.0 (details in <code>REVISAO_2026-10-19.md</code> at the repository root).</p>
+<p>Fixes from the external review of 0.2.0.</p>
 <ul><li>An empty, <code>NA</code> or empty-string locality is an error; it used to become a query for the whole of Brazil.</li>
 <li>Every locality is validated, even next to <code>"BR"</code>.</li>
 <li>A 7-digit code with a wrong check digit is an error; the last digit used to be dropped (<code>2611600</code> queried Recife).</li>

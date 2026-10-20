@@ -28,8 +28,7 @@
 
 ## misocialr 0.3.1
 
-Fixes from the final report on 0.3.0 and the parallel verification
-(details in `REVISAO_FINAL_2026-10-19.md` at the repository root).
+Fixes from the final report on 0.3.0 and the parallel verification.
 
 - **Queries by POST.** With many months, fields and codes, the GET URL
   exceeded the server limit (HTTP 414, reproduced with 35 fields, 288
@@ -63,8 +62,7 @@ Fixes from the final report on 0.3.0 and the parallel verification
 
 ## misocialr 0.3.0
 
-Fixes from the in-depth analysis of 0.2.1 (details in
-`REVISAO_PROFUNDA_2026-10-19.md` at the repository root).
+Fixes from the in-depth analysis of 0.2.1.
 
 - Single response contract (`check_response()`): a partial result, a
   `responseHeader$status` other than 0, an invalid `numFound` and
@@ -113,8 +111,7 @@ Fixes from the in-depth analysis of 0.2.1 (details in
 
 ## misocialr 0.2.1
 
-Fixes from the external review of 0.2.0 (details in
-`REVISAO_2026-10-19.md` at the repository root).
+Fixes from the external review of 0.2.0.
 
 - An empty, `NA` or empty-string locality is an error; it used to become
   a query for the whole of Brazil.
