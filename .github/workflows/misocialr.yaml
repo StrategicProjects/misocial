@@ -52,6 +52,7 @@ jobs:
     name: minimum dependency versions
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      _R_CHECK_FORCE_SUGGESTS_: false
     steps:
       - uses: actions/checkout@v4
       - uses: r-lib/actions/setup-pandoc@v2
@@ -59,13 +60,23 @@ jobs:
         with:
           r-version: "4.1"
           use-public-rspm: true
+      # dependencies '"hard"' keeps pak from pulling the Suggests of the
+      # pinned packages (dbplyr, tidyr...), which require newer versions
+      # than the pins; the Suggests this package needs are listed instead.
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           working-directory: misocialr
+          dependencies: '"hard"'
           extra-packages: |
             any::rcmdcheck
+            any::httptest2
+            any::withr
+            any::jsonlite
+            any::webfakes
+            any::knitr
+            any::rmarkdown
             httr2@1.0.4
-            cli@3.6.0
+            cli@3.6.1
             dplyr@1.1.0
             purrr@1.0.0
             testthat@3.2.1

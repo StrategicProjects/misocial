@@ -16,6 +16,8 @@
   is the longest monthly series, not a yearly total.
 * `options(misocialr.cache_ttl = seconds)`: optional cache validity (the
   default remains the session).
+* DESCRIPTION: `cli (>= 3.6.1)` — the declared minimum versions were not
+  co-installable, since `testthat` 3.2.1 requires `cli >= 3.6.1`.
 
 # misocialr 0.3.1
 
