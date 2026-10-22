@@ -5,6 +5,7 @@ title: "misocial: Access the Brazilian MDS Social Information Matrix (MI Social)
 version: 0.4.0
 date-released: 2026-10-20
 license: MIT
+doi: 10.5281/zenodo.23504084
 repository-code: "https://github.com/StrategicProjects/misocial"
 url: "https://strategicprojects.github.io/misocial/"
 keywords:
