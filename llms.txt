@@ -34,6 +34,15 @@ can be requested by name in
 
 ## Installation
 
+From CRAN:
+
+``` r
+
+install.packages("misocialr")
+```
+
+Development version from GitHub:
+
 ``` r
 
 # install.packages("remotes")
