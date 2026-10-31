@@ -1,3 +1,7 @@
+# misocialpy (development version)
+
+* Requires Python >= 3.10 (3.9 reached end of life in October 2025).
+
 # misocialpy 0.4.0.post1
 
 Metadata only: adds Júlia Nascimento Barreto to the authors. No code

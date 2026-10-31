@@ -46,8 +46,8 @@ pip install ./misocialpy        # from the repository root
 pip install .                   # from inside misocialpy/
 ```
 
-Requires Python >= 3.9, pandas >= 1.3 and requests >= 2.25 (tested with
-pandas 1.3.5 and requests 2.25.1 on Python 3.9, and with pandas 3.0.6 on
+Requires Python >= 3.10, pandas >= 1.3 and requests >= 2.25 (tested with
+pandas 1.3.5 and requests 2.25.1 on Python 3.10, and with pandas 3.0.6 on
 Python 3.14).
 
 ## Usage
