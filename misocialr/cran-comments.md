@@ -1,3 +1,12 @@
+## Notes for the next update
+
+misocialr 0.4.0 was accepted on 2026-10-31. The CRAN reviewer asked that,
+in the next update, single quotes be used only around software, package and
+API names, and removed from other terms. DESCRIPTION already follows this:
+quotes remain only on 'Tidyverse', 'MI Social' and 'R'; the quotes on MDS,
+SAGI, Cadastro Unico, Bolsa Familia, BPC, CRAS, CREAS, SUAS and tibbles were
+removed. Mention this in the "Resubmission"/update notes of the next version.
+
 ## Submission: misocialr 0.4.0
 
 This is a new submission. The package is a tidyverse-friendly client for

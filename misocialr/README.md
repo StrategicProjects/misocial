@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg)
 ![](https://img.shields.io/badge/devel%20version-0.4.0-blue.svg)
 [![R-CMD-check](https://github.com/StrategicProjects/misocial/actions/workflows/misocialr.yaml/badge.svg)](https://github.com/StrategicProjects/misocial/actions/workflows/misocialr.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/misocialr)](https://CRAN.R-project.org/package=misocialr)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23838960.svg)](https://doi.org/10.5281/zenodo.23838960)
 <!-- badges: end -->
 
 Tidyverse-friendly R interface to the **MI Social** API (Matriz de
@@ -36,6 +38,14 @@ The fields of each theme are in `mds_fields()`. Any other field of the API
 (`mds_api_fields()`) can be requested by name in `mds_data()`.
 
 ## Installation
+
+From CRAN:
+
+```r
+install.packages("misocialr")
+```
+
+Development version from GitHub:
 
 ```r
 # install.packages("remotes")
