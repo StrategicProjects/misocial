@@ -1,6 +1,6 @@
 {
-  "title": "misocialpy: Access the Brazilian MDS Social Information Matrix (MI Social) API from Python",
-  "description": "<p>Pandas-friendly Python interface to the MI Social API (Matriz de Informação Social) of the Brazilian Ministry of Development and Social Assistance (MDS/SAGI). Monthly municipal series of the Cadastro Único, the Bolsa Família programme and its conditionalities, the BPC benefit, the social assistance network (SUAS) and its funding, and food security programmes, as tidy long-format DataFrames. Sibling of the R package misocialr, with the same functions, dictionary and recorded test fixtures.</p>",
+  "title": "misocialr: Access the Brazilian MDS Social Information Matrix (MI Social) API from R",
+  "description": "<p>Tidyverse-friendly R interface to the MI Social API (Matriz de Informação Social) of the Brazilian Ministry of Development and Social Assistance (MDS/SAGI). Monthly municipal series of the Cadastro Único, the Bolsa Família programme and its conditionalities, the BPC benefit, the social assistance network (SUAS) and its funding, and food security programmes, as tidy long-format tibbles. Sibling of the Python package misocialpy, with the same functions, dictionary and recorded test fixtures.</p>",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -12,8 +12,8 @@
     {"name": "Nascimento Barreto, Júlia", "orcid": "0009-0004-2851-7770"}
   ],
   "keywords": [
-    "Python",
-    "pandas",
+    "R",
+    "tidyverse",
     "open data",
     "Brazil",
     "MDS",
@@ -25,7 +25,7 @@
     "social assistance"
   ],
   "related_identifiers": [
-    {"identifier": "https://pypi.org/project/misocialpy/", "relation": "isSupplementTo", "scheme": "url"},
-    {"identifier": "https://github.com/StrategicProjects/misocial", "relation": "isSupplementTo", "scheme": "url"}
+    {"identifier": "https://CRAN.R-project.org/package=misocialr", "relation": "isSupplementTo", "scheme": "url"},
+    {"identifier": "https://strategicprojects.github.io/misocial/", "relation": "isSupplementTo", "scheme": "url"}
   ]
 }
