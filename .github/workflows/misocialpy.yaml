@@ -30,7 +30,12 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python: ["3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+        # setup-python has no 3.9 build for Ubuntu 26.04 (ubuntu-latest since
+        # 2026-10); run the 3.9 jobs on 24.04 while 3.9 is still supported.
+        exclude:
+          - {os: ubuntu-latest, python: "3.9"}
         include:
+          - {os: ubuntu-24.04, python: "3.9"}
           - {os: windows-latest, python: "3.13"}
           - {os: macos-latest, python: "3.13"}
     defaults:
@@ -49,7 +54,7 @@ jobs:
         run: python sincronizar_python.py --check
 
   minimum-deps:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Python 3.9, see above
     name: minimum dependency versions
     defaults:
       run:
