@@ -56,12 +56,46 @@ test_that("F5: documents beyond numFound are an error", {
 test_that("F6: a body that is not JSON is a classed response error", {
   withr::local_options(misocialr.quiet = TRUE)
   httr2::local_mocked_responses(function(req) {
-    httr2::response(status_code = 200, body = charToRaw("<html>"))
+    httr2::response(status_code = 200, url = mds_base_url,
+                    body = charToRaw("not { json"))
   })
   err <- tryCatch(mds_request(list(rows = 0)), error = function(e) e)
   expect_s3_class(err, "misocialr_error_response")
   expect_match(conditionMessage(err), "not valid JSON")
   expect_false(is.null(err$parent))
+})
+
+test_that("F6b: a redirect away from the API is a clear unavailability error", {
+  withr::local_options(misocialr.quiet = TRUE)
+  httr2::local_mocked_responses(function(req) {
+    httr2::response(
+      status_code = 200,
+      url = "https://www.gov.br/mds/pt-br/avisos",
+      headers = list(`content-type` = "text/html;charset=utf-8"),
+      body = charToRaw("<!DOCTYPE html><html></html>")
+    )
+  })
+  err <- tryCatch(mds_request(list(rows = 0)), error = function(e) e)
+  expect_s3_class(err, "misocialr_error_http")
+  expect_match(conditionMessage(err), "unavailable")
+  expect_match(conditionMessage(err), "redirected")
+  expect_match(conditionMessage(err), "avisos")
+})
+
+test_that("F6c: an HTML page at the API URL is a clear unavailability error", {
+  withr::local_options(misocialr.quiet = TRUE)
+  httr2::local_mocked_responses(function(req) {
+    httr2::response(
+      status_code = 200,
+      url = mds_base_url,
+      headers = list(`content-type` = "text/html"),
+      body = charToRaw("<html>maintenance</html>")
+    )
+  })
+  err <- tryCatch(mds_request(list(rows = 0)), error = function(e) e)
+  expect_s3_class(err, "misocialr_error_http")
+  expect_match(conditionMessage(err), "unavailable")
+  expect_match(conditionMessage(err), "HTML page")
 })
 
 # Retries are tested against a real local HTTP server: httr2's mocked

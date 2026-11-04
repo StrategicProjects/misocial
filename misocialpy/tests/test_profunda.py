@@ -347,8 +347,39 @@ def test_http_errors_are_classed_and_keep_the_status():
 
 @responses.activate
 def test_invalid_json_is_a_response_error():
-    responses.post(_client.MDS_BASE_URL, body="<html>", status=200)
+    responses.post(_client.MDS_BASE_URL, body="not { json", status=200)
     with pytest.raises(ResponseError, match="not valid JSON"):
+        _client.mds_request({"rows": 0})
+
+
+@responses.activate
+def test_a_redirect_away_from_the_api_is_a_clear_unavailability_error():
+    # Maintenance mode seen in 2026-11: every request 302s to a notice page.
+    responses.post(
+        _client.MDS_BASE_URL,
+        status=302,
+        headers={"Location": "https://www.gov.br/mds/pt-br/avisos"},
+    )
+    responses.get(
+        "https://www.gov.br/mds/pt-br/avisos",
+        body="<!DOCTYPE html><html></html>",
+        status=200,
+        content_type="text/html;charset=utf-8",
+    )
+    with pytest.raises(HttpError, match="(?s)unavailable.*redirected.*avisos") as err:
+        _client.mds_request({"rows": 0})
+    assert err.value.status is None
+
+
+@responses.activate
+def test_an_html_page_at_the_api_url_is_a_clear_unavailability_error():
+    responses.post(
+        _client.MDS_BASE_URL,
+        body="<html>maintenance</html>",
+        status=200,
+        content_type="text/html",
+    )
+    with pytest.raises(HttpError, match="(?s)unavailable.*HTML page"):
         _client.mds_request({"rows": 0})
 
 

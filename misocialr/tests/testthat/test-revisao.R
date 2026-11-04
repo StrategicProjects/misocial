@@ -174,7 +174,7 @@ test_that("the timeout can be set with an option", {
   seen <- NULL
   httr2::local_mocked_responses(function(req) {
     seen <<- req$options$timeout_ms
-    httr2::response(status_code = 200,
+    httr2::response(status_code = 200, url = mds_base_url,
                     body = charToRaw('{"response":{"numFound":0,"docs":[]}}'))
   })
   suppressMessages(mds_request(list(rows = 0)))

@@ -223,6 +223,10 @@ def test_the_timeout_can_be_set(monkeypatch):
 
             class R:
                 status_code = 200
+                url = _client.MDS_BASE_URL
+
+                def __init__(self):
+                    self.headers = {}
 
                 def json(self):
                     return {"response": {"numFound": 0, "docs": []}}

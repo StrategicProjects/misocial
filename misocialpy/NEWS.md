@@ -1,6 +1,12 @@
-# misocialpy (development version)
+# misocialpy 0.4.1
 
 * Requires Python >= 3.10 (3.9 reached end of life in October 2025).
+* **Clear error when the API is unavailable.** A server under maintenance
+  redirects every request to a gov.br notice page or serves an HTML page
+  from the API URL (seen in 2026-11, after the MDS security maintenance
+  notice); both now raise `HttpError` saying the service is unavailable and
+  pointing to <https://www.gov.br/mds/pt-br/avisos>, instead of a JSON
+  decode error.
 
 # misocialpy 0.4.0.post1
 

@@ -69,6 +69,29 @@ mds_request <- function(query = list(), .label = "data") {
     }
   )
 
+  # A server under maintenance answers 200 but redirects every request to a
+  # gov.br notice page (2026-11: everything went to /mds/pt-br/avisos), or
+  # serves an HTML page straight from the API URL. Either way the service is
+  # unavailable: say so instead of failing inside the JSON parser.
+  final_url <- httr2::resp_url(resp)
+  content_type <- httr2::resp_content_type(resp)
+  redirected <- !is.na(final_url) && nzchar(final_url) &&
+    !startsWith(final_url, mds_base_url)
+  is_html <- !is.na(content_type) && grepl("html", content_type, fixed = TRUE)
+  if (redirected || is_html) {
+    abort_mds(c(
+      "The MDS MI Social API is unavailable.",
+      "x" = if (redirected) {
+        "The server redirected the request to {.url {final_url}} instead of
+         answering."
+      } else {
+        "The server answered with an HTML page instead of JSON."
+      },
+      "i" = "This usually means the service is down for maintenance. Check
+             {.url https://www.gov.br/mds/pt-br/avisos} and try again later."
+    ), "http", status = NULL)
+  }
+
   # The server labels its JSON as text/plain. A body that is not JSON (an
   # HTML error page, for instance) is a response error, not a parser error.
   result <- tryCatch(

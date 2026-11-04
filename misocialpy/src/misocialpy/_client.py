@@ -153,6 +153,25 @@ def mds_request(query: Mapping[str, Any] | None = None, label: str = "data") -> 
             status=resp.status_code,
         )
 
+    # A server under maintenance answers 200 but redirects every request to a
+    # gov.br notice page (2026-11: everything went to /mds/pt-br/avisos), or
+    # serves an HTML page straight from the API URL. Either way the service
+    # is unavailable: say so instead of failing inside the JSON parser.
+    redirected = not resp.url.startswith(MDS_BASE_URL)
+    is_html = "html" in resp.headers.get("Content-Type", "")
+    if redirected or is_html:
+        reason = (
+            f"The server redirected the request to {resp.url} instead of answering."
+            if redirected
+            else "The server answered with an HTML page instead of JSON."
+        )
+        raise HttpError(
+            "The MDS MI Social API is unavailable.\n"
+            f"  x {reason}\n"
+            "  i This usually means the service is down for maintenance. Check "
+            "https://www.gov.br/mds/pt-br/avisos and try again later."
+        )
+
     # The server labels its JSON as text/plain; requests does not check it.
     try:
         return resp.json()

@@ -1,3 +1,12 @@
+# misocialr 0.4.1
+
+* **Clear error when the API is unavailable.** A server under maintenance
+  redirects every request to a gov.br notice page or serves an HTML page
+  from the API URL (seen in 2026-11, after the MDS security maintenance
+  notice); both now raise a `misocialr_error_http` saying the service is
+  unavailable and pointing to <https://www.gov.br/mds/pt-br/avisos>,
+  instead of a JSON lexical error.
+
 # misocialr 0.4.0
 
 * **Paging by `cursorMark`.** Pages are read by the sort key (`id`), not by
