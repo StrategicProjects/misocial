@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg)
-![](https://img.shields.io/badge/devel%20version-0.4.0-blue.svg)
+![](https://img.shields.io/badge/devel%20version-0.4.1-blue.svg)
 [![R-CMD-check](https://github.com/StrategicProjects/misocial/actions/workflows/misocialr.yaml/badge.svg)](https://github.com/StrategicProjects/misocial/actions/workflows/misocialr.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/misocialr)](https://CRAN.R-project.org/package=misocialr)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23838960.svg)](https://doi.org/10.5281/zenodo.23838960)
