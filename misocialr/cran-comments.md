@@ -1,17 +1,19 @@
-## Notes for the next update
+## Submission: misocialr 0.4.1
 
-misocialr 0.4.0 was accepted on 2026-10-31. The CRAN reviewer asked that,
-in the next update, single quotes be used only around software, package and
-API names, and removed from other terms. DESCRIPTION already follows this:
-quotes remain only on 'Tidyverse', 'MI Social' and 'R'; the quotes on MDS,
-SAGI, Cadastro Unico, Bolsa Familia, BPC, CRAS, CREAS, SUAS and tibbles were
-removed. Mention this in the "Resubmission"/update notes of the next version.
+This is an update of misocialr 0.4.0 (accepted 2026-10-31).
 
-## Submission: misocialr 0.4.0
+Changes in this version:
 
-This is a new submission. The package is a tidyverse-friendly client for
-the MI Social API of the Brazilian Ministry of Development and Social
-Assistance (MDS/SAGI).
+* Clear error when the MI Social API is unavailable: a server under
+  maintenance redirects every request to a notice page or serves an HTML
+  page from the API URL; both now raise a classed error saying the service
+  is unavailable, instead of a JSON parser error.
+* One author added to Authors@R (Julia Nascimento Barreto), already an
+  author of the package's companion materials.
+* As asked by the CRAN reviewer on acceptance of 0.4.0, single quotes in
+  DESCRIPTION are now used only around software, package and API names
+  ('Tidyverse', 'MI Social', 'R'); the quotes on MDS, SAGI, Cadastro Unico,
+  Bolsa Familia, BPC, CRAS, CREAS, SUAS and tibbles were removed.
 
 All examples that reach the network are wrapped in
 `@examplesIf interactive()`; the test suite runs entirely offline against
@@ -19,9 +21,7 @@ recorded responses (httptest2 fixtures and a local webfakes server).
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* New submission.
+0 errors | 0 warnings | 0 notes
 
 ## Test environments
 
