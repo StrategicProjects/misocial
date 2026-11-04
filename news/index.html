@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">misocialr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,12 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="0.4.0" id="misocialr-040">misocialr 0.4.0<a class="anchor" aria-label="anchor" href="#misocialr-040"></a></h2>
+<h2 class="pkg-version" data-toc-text="0.4.1" id="misocialr-041">misocialr 0.4.1<a class="anchor" aria-label="anchor" href="#misocialr-041"></a></h2>
+<ul><li>
+<strong>Clear error when the API is unavailable.</strong> A server under maintenance redirects every request to a gov.br notice page or serves an HTML page from the API URL (seen in 2026-11, after the MDS security maintenance notice); both now raise a <code>misocialr_error_http</code> saying the service is unavailable and pointing to <a href="https://www.gov.br/mds/pt-br/avisos" class="external-link uri">https://www.gov.br/mds/pt-br/avisos</a>, instead of a JSON lexical error.</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.4.0" id="misocialr-040">misocialr 0.4.0<a class="anchor" aria-label="anchor" href="#misocialr-040"></a></h2><p class="text-muted">CRAN release: 2026-10-31</p>
 <ul><li>
 <strong>Paging by <code>cursorMark</code>.</strong> Pages are read by the sort key (<code>id</code>), not by position: documents added or removed while reading no longer shift the pages. Checked live: the same 185 documents for PE in 2024-01 as paging by <code>start</code>. The checks for a stable total, no repeated <code>id</code> and nothing missing remain.</li>
 <li>

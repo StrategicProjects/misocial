@@ -24,13 +24,13 @@ Source:
 
 Leite A, Wasiliew M, Vasconcelos H, Amorim C, Bezerra D, Nascimento
 Barreto J (2026). *misocialr: Access the Brazilian MDS Social
-Information Matrix ('MI Social') API from 'R'*. R package version 0.4.0,
+Information Matrix ('MI Social') API from 'R'*. R package version 0.4.1,
 <https://strategicprojects.github.io/misocial/>.
 
     @Manual{,
       title = {misocialr: Access the Brazilian MDS Social Information Matrix ('MI Social') API from 'R'},
       author = {André Leite and Marcos Wasiliew and Hugo Vasconcelos and Carlos Amorim and Diogo Bezerra and Júlia {Nascimento Barreto}},
       year = {2026},
-      note = {R package version 0.4.0},
+      note = {R package version 0.4.1},
       url = {https://strategicprojects.github.io/misocial/},
     }
