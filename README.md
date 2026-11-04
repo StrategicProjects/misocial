@@ -21,7 +21,7 @@ tables.
 | Package | Language | Install | DOI | Docs |
 | --- | --- | --- | --- | --- |
 | [`misocialr`](misocialr/) | R (tibbles, httr2) | [CRAN](https://CRAN.R-project.org/package=misocialr): `install.packages("misocialr")` | [10.5281/zenodo.23838960](https://doi.org/10.5281/zenodo.23838960) | [site](https://strategicprojects.github.io/misocial/), [README](misocialr/README.md), [NEWS](misocialr/NEWS.md) |
-| [`misocialpy`](misocialpy/) | Python (pandas, requests) | [PyPI](https://pypi.org/project/misocialpy/): `pip install misocialpy` | [10.5281/zenodo.23504405](https://doi.org/10.5281/zenodo.23504405) | [README](misocialpy/README.md), [NEWS](misocialpy/NEWS.md) |
+| [`misocialpy`](misocialpy/) | Python (pandas, requests) | [PyPI](https://pypi.org/project/misocialpy/): `pip install misocialpy` | [10.5281/zenodo.23945390](https://doi.org/10.5281/zenodo.23945390) | [README](misocialpy/README.md), [NEWS](misocialpy/NEWS.md) |
 
 The DOI badge above is the concept DOI of the repository, which always
 resolves to the latest release of either package; cite the per-package
